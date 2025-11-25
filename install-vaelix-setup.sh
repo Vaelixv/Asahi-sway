@@ -48,8 +48,12 @@ echo -e "${PINK}\n--------------------------------------------------------------
 sudo dnf update -y
 
 echo -e "${PINK}\n---------------------------------------------------------------------\n${YELLOW}[2/11]${PINK} ==> Installing development tools\n---------------------------------------------------------------------\n${WHITE}"
-sudo dnf group install "Development Tools" -y
-sudo dnf install -y git curl wget vim neovim gcc-c++ cmake meson ninja-build
+sudo dnf install -y \
+    git curl wget vim neovim \
+    gcc gcc-c++ make automake autoconf \
+    cmake meson ninja-build \
+    pkgconfig patch diffutils \
+    libtool bison flex
 
 echo -e "${PINK}\n---------------------------------------------------------------------\n${YELLOW}[3/11]${PINK} ==> Installing Sway and Wayland components\n---------------------------------------------------------------------\n${WHITE}"
 sudo dnf install -y sway swaylock swayidle swaybg waybar rofi-wayland swaync wlogout
