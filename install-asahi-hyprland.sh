@@ -55,7 +55,7 @@ esac
 echo -e "${YELLOW}\nEnter your dotfiles repository URL (or press Enter to use default): ${WHITE}"
 read -r DOTFILES_REPO
 if [[ -z "$DOTFILES_REPO" ]]; then
-    DOTFILES_REPO="https://github.com/YOUR_USERNAME/dotfiles.git"
+    DOTFILES_REPO="https://github.com/Vaelixv/dotfiles.git"
     echo -e "${BLUE}[NOTE]${PINK} ==> Using default repo (you'll need to update this)"
 fi
 
